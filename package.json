@@ -1,0 +1,19 @@
+{
+  "name": "mern_starter",
+  "version": "1.0.0",
+  "description": "Boilerplate code for Mern Projects",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RajeshManikandan/mern_starter.git"
+  },
+  "author": "Rajesh Manikandan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RajeshManikandan/mern_starter/issues"
+  },
+  "homepage": "https://github.com/RajeshManikandan/mern_starter#readme"
+}
