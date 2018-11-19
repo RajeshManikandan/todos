@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/RajeshManikandan/mern_starter/issues"
   },
-  "homepage": "https://github.com/RajeshManikandan/mern_starter#readme"
+  "homepage": "https://github.com/RajeshManikandan/mern_starter#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.12"
+  }
 }
