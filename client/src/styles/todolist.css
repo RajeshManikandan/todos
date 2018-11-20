@@ -1,0 +1,46 @@
+body {
+    background-color: #418abf;
+}
+h2 {
+    color: #fff;
+}
+form {
+    padding: 0;
+}
+input {
+    padding: 10px;
+    margin-right: 3px;
+    font-size: 16px;
+}
+button {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #bf0c3c;
+    border: 2px solid #bf0c3c;
+    box-shadow: 2px 2px #777;
+}
+button:hover {
+    background-color: #870017;
+    border: 2px solid #870017;
+}
+
+ul {
+    margin-top: 10px;
+    padding: 0;
+}
+ul li {
+    list-style: none;
+    font-size: 22px;
+    color: #bf0c3c;
+    background: aliceblue;
+    width: 80%;
+    margin: auto;
+    margin-top: 5px;
+    cursor: pointer;
+    /* font-weight: bold; */
+}
+.todo {
+    width: 320px;
+    margin: 0 auto;
+}
