@@ -1,0 +1,199 @@
+$colors: (primary: #01cbc6, accent:#ea7773, secondary:#d3dbdd, font:#eaf0f1, dark-font:#333);
+@function colors($name) {
+    @return map-get($colors,$name);
+}
+
+.navbar {
+    background-color: colors(primary) !important;
+    a {
+        color: colors(font) !important;
+    }
+}
+
+.container-fluid {
+    .row {
+        background-color: colors(secondary);
+        height: 92.5vh;
+        color: #fff;
+        div[class|='col-sm'] {
+            border: 0.5px solid #f5f6f8;
+            color: colors(dark-font);
+            padding: 15px;
+        }
+    }
+}
+
+#todos {
+    #todoInput {
+        width: 100%;
+        background-color: #ddd7d7;
+        border: 0;
+        border-bottom: 1px solid #333;
+        font-size: 16px;
+        padding: 5px;
+        outline: none;
+        margin-bottom: 15px;
+    }
+    .todo-item {
+        padding: 10px 25px;
+        background-color: #fff;
+        font-size: 0.9em;
+        border-radius: 0px;
+        border-bottom: 1px solid #c1c1c1;
+        margin-top: 3px;
+        cursor: pointer;
+        .todo-logo {
+            height: 18px;
+            padding-left: 5px;
+            filter: invert(0.9);
+        }
+        .title {
+            padding-left: 10px;
+        }
+        .start-logo {
+            height: 18px;
+            float: right;
+            cursor: pointer;
+        }
+        .pause-logo {
+            height: 17px;
+            float: right;
+            cursor: pointer;
+        }
+        .sub-title {
+            font-size: 12px;
+            display: inline-block;
+            padding-left: 5px;
+            color: #c1c1c1;
+        }
+        .borders {
+            height: 2px;
+            background: #2f363f;
+            padding: 0;
+            border: 0 !important;
+        }
+    }
+
+    .todo-item:hover {
+        background-color: #e7eaeb;
+    }
+
+    .active-play {
+        color: colors(font);
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 1200px;
+        animation: Gradient 10s ease infinite;
+    }
+    .completed {
+        text-decoration: line-through;
+    }
+    .active {
+        // background-color: #d3dbdd;
+        transform: scale(0.98);
+    }
+}
+
+#categories {
+    #category-list {
+        padding: 0;
+        li {
+            list-style-type: none;
+            text-align: center;
+            font-size: 16px;
+            padding: 8px 8px;
+            width: 100%;
+            color: #333;
+            cursor: pointer;
+            margin-top: 5px;
+            box-shadow: 1px 2px solid #ffffff;
+        }
+        .active {
+            background-color: #e7eaeb;
+        }
+    }
+    #category {
+        width: 100%;
+        background-color: #ddd7d7;
+        border: 0;
+        border-bottom: 1px solid #333;
+        font-size: 16px;
+        padding: 5px;
+        outline: none;
+        text-align: center;
+    }
+}
+
+#details {
+    background-color: #fff;
+    padding: 15px;
+    .title {
+        width: 100%;
+        outline: none;
+        border: 0;
+        font-size: 21px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .title:hover {
+        background-color: #ddd7d7;
+    }
+    #subtask {
+        width: 70%;
+        background-color: #ddd7d7;
+        border: 0;
+        border-bottom: 1px solid #333;
+        font-size: 16px;
+        padding: 5px;
+        outline: none;
+        margin-bottom: 15px;
+    }
+}
+
+.checkbox {
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    -webkit-appearance: none;
+    border-radius: 4px;
+    background: #c1c1c1;
+    padding-top: 5px;
+    outline: none;
+    vertical-align: center;
+}
+.checkbox:checked {
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    background: colors(accent);
+    -webkit-appearance: none;
+    vertical-align: center;
+
+    border-radius: 4px;
+    outline: none;
+}
+
+.subtask {
+    padding: 5px 0px;
+    border-bottom: 1px solid #d3dbdd;
+    .name {
+        padding-left: 10px;
+    }
+    .close {
+        float: right;
+        padding-right: 5px;
+        font-size: 16px;
+        font-weight: normal;
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

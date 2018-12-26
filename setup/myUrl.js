@@ -1,3 +1,3 @@
 module.exports.urls = {
-    mongoose: 'mongodb://admin:password1@ds115653.mlab.com:15653/mern_starter'
+    mongoose: 'mongodb://admin:password1@ds243344.mlab.com:43344/todos'
 };

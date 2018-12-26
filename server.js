@@ -14,8 +14,11 @@ mongoose
     .then(() => console.log('Database Connected'))
     .catch(err => console.log('dbConnectError : ' + err));
 
+mongoose.set('useFindAndModify', false);
+
 //Importing Routes
 const todo = require('./routes/api/todo');
+const category = require('./routes/api/category');
 
 //@Route    GET
 //ACCESS    PUBLIC
@@ -25,7 +28,8 @@ app.get('/', (req, res) => {
 });
 
 //Setting Up Routes
-app.use('/api', todo);
+app.use('/api/todo', todo);
+app.use('/api/category', category);
 
 //listening to port
 const port = process.env.port | 8000;

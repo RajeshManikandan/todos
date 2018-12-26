@@ -6,10 +6,54 @@ const TodoSchema = new Schema({
         type: String,
         required: true
     },
-    date: {
+    category: {
+        type: Schema.Types.ObjectId,
+        ref: 'category'
+    },
+    description: {
+        type: String
+    },
+    subtasks: [
+        {
+            name: {
+                type: String,
+                required: true
+            },
+            isCompleted: {
+                type: Boolean,
+                default: false
+            }
+        }
+    ],
+    lastStartTime: {
+        type: Date
+    },
+    totalWorkTime: {
+        type: Object
+    },
+    status: {
+        type: String,
+        default: 'Open' //Open or Playing or Completed
+    },
+    completedAt: {
+        type: Date
+    },
+    createdAt: {
         type: Date,
         default: Date.now()
     }
 });
 
-module.exports = Todo = mongoose.model('myTodo', TodoSchema);
+module.exports = Todo = mongoose.model('todo', TodoSchema);
+
+// todo{
+//     name,
+//     category,
+//     description,
+//     sub_tasks[],
+//     lastStartTime,
+//     totalWorkTime,
+//     playing,
+//     completedAt,
+//     createdAt,
+// }

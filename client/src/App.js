@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import TodoList from './components/todolist';
-import './App.css';
+import './styles/app.css';
+import Main from './components/main';
+import NavBar from './components/navbar';
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <TodoList />
+                <NavBar />
+                <Main />
             </div>
         );
     }

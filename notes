@@ -1,0 +1,24 @@
+//model todo
+
+category{
+    name,
+    createdAt
+}
+
+todo{
+    name,
+    category,
+    description,
+    sub_tasks[],
+    lastStartTime,
+    totalWorkTime,
+    playing,
+    completedAt,
+    createdAt,
+}
+
+sub_task{
+    name,
+    isCompleted
+}
+
