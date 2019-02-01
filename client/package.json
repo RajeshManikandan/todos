@@ -23,5 +23,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "todos-l2c.herokuapp.com"
+  "proxy": "https://todos-l2c.herokuapp.com:8000/"
 }
