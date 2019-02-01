@@ -8,7 +8,8 @@
     "nodemon": "node server",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run client\" \"nodemon\"",
-    "start":"npm run dev"
+    "start": "npm run dev",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,11 @@
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "mongoose": "^5.3.12"
-  }
+  },
+  "engines": {
+    "node": "10.5.0"
+}
 }

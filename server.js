@@ -1,7 +1,19 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+require("dotenv").config()
 const mongooseUrl = require('./setup/myUrl').urls.mongoose;
+// ... other imports
+const path = require('path');
+
+// ... other app.use middleware
+app.use(express.static(path.join(__dirname, 'client', 'build')));
+
+// ...
+// Right before your app.listen(), add this:
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+});
 
 //Middleware for Body Parser
 const bodyparser = require('body-parser');
@@ -12,7 +24,7 @@ app.use(bodyparser.json());
 mongoose
     .connect(mongooseUrl, { useNewUrlParser: true })
     .then(() => console.log('Database Connected'))
-    .catch(err => console.log('dbConnectError : ' + err));
+    .catch((err) => console.log('dbConnectError : ' + err));
 
 mongoose.set('useFindAndModify', false);
 
