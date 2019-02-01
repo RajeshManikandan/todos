@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Todos from './todos';
 import Categories from './categories';
 import axios from 'axios';
-import TodoDetail from './tododetail';
+import TodoDetail from './tododetail.jsx';
 
 class Main extends Component {
     state = {
@@ -28,7 +28,7 @@ class Main extends Component {
             this.loadCategory();
             this.loadTodo();
         });
-    };
+    }; 
 
     updateActiveCategory = category => {
         console.log('updateCategory', category.name);
@@ -57,7 +57,6 @@ class Main extends Component {
     };
 
     updateActiveTodo = todo => {
-        console.log('activeTodo', todo);
         this.setState({ activeTodo: todo });
     };
     componentDidMount = () => {

@@ -1,4 +1,4 @@
-$colors: (primary: #01cbc6, accent:#ea7773, secondary:#d3dbdd, font:#eaf0f1, dark-font:#333);
+$colors: (primary: #01cbc6, accent:#ea7773, secondary:#e8edee, font:#eaf0f1, dark-font:#333);
 @function colors($name) {
     @return map-get($colors,$name);
 }
@@ -88,8 +88,8 @@ $colors: (primary: #01cbc6, accent:#ea7773, secondary:#d3dbdd, font:#eaf0f1, dar
         text-decoration: line-through;
     }
     .active {
-        // background-color: #d3dbdd;
-        transform: scale(0.98);
+        background-color: #d3dbdd;
+        
     }
 }
 
@@ -146,6 +146,7 @@ $colors: (primary: #01cbc6, accent:#ea7773, secondary:#d3dbdd, font:#eaf0f1, dar
         padding: 5px;
         outline: none;
         margin-bottom: 15px;
+        margin-top: 15px;
     }
 }
 
@@ -184,6 +185,9 @@ $colors: (primary: #01cbc6, accent:#ea7773, secondary:#d3dbdd, font:#eaf0f1, dar
         font-size: 16px;
         font-weight: normal;
     }
+}
+.completed {
+    text-decoration: line-through;
 }
 
 @keyframes Gradient {

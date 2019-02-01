@@ -168,7 +168,7 @@ router.post('/subtask', (req, res) => {
             todo
                 .save()
                 .then(todo => {
-                    res.send(todo);
+                    res.send(todo.subtasks[todo.subtasks.length - 1]);
                 })
                 .catch(err => {
                     res.status(404).send('addSubTaskError' + err);

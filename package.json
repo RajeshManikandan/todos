@@ -7,18 +7,19 @@
     "server": "node server",
     "nodemon": "node server",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run client\" \"nodemon\""
+    "dev": "concurrently \"npm run client\" \"nodemon\"",
+    "start":"npm run dev"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RajeshManikandan/mern_starter.git"
+    "url": "git+https://github.com/RajeshManikandan/todos.git"
   },
   "author": "Rajesh Manikandan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RajeshManikandan/mern_starter/issues"
+    "url": "https://github.com/RajeshManikandan/todos.git"
   },
-  "homepage": "https://github.com/RajeshManikandan/mern_starter#readme",
+  "homepage": "https://github.com/RajeshManikandan/todos.git",
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
