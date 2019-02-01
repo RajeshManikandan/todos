@@ -1,7 +1,7 @@
 {
-  "name": "mern_starter",
+  "name": "todos",
   "version": "1.0.0",
-  "description": "Boilerplate code for Mern Projects",
+  "description": "Copy of microsoft Todo List",
   "main": "server.js",
   "scripts": {
     "server": "node server",
